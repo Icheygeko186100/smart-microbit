@@ -35,5 +35,7 @@ radio.setGroup(1)
 basic.forever(function () {
     if (input.logoIsPressed()) {
         record.playAudio(record.BlockingState.Nonblocking)
+        I2C_LCD1602.LcdInit(0)
+        I2C_LCD1602.ShowString("Mic off", 0, 0)
     }
 })
